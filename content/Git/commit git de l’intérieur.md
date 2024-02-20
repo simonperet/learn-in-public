@@ -3,7 +3,7 @@ title: C’est quoi au final un commit dans git ?
 description: 
 tags:
   - git
-draft: false
+draft: true
 date: 2024-02-18
 created: 2024-02-18T18:31
 updated: 2024-02-19T22:29
