@@ -54,7 +54,7 @@ Voilà, ça y est, notre premier commit du projet est là, on peut vérifier qu�
 git log
 ```
 
-![[content/Git/commit git de l'intérieur - files/first-git-log.png]]
+![[first-git-log.png]]
 
 **On peut voir plusieurs choses** :
 - Qui a créé le commit (Author)
@@ -68,7 +68,7 @@ Bon ok, vous allez me dire rien d’extraordinaire pour le moment... En effet.
 
 Vous vous rappelez le dossier `.git` ? Qu’est-ce qui a changé dedans maintenant qu’on a créé notre premier commit ?
 
-![[content/Git/commit git de l'intérieur - files/tree-after-one-commit.png]]
+![[tree-after-one-commit.png]]
 
 On a des nouveaux fichiers, 4 pour être précis. Tous dans le dossier `objects`. 
 
@@ -85,19 +85,19 @@ Il s’agit donc bien de notre commit. Contrairement à la sortie de `git log` o
 
 Tout ce qui possède un hash dans git est un objet, on va donc pouvoir l’étudier avec la commande `cat-file` :
 
-![[content/Git/commit git de l'intérieur - files/first-tree-content.png]]
+![[first-tree-content.png]]
 
 Cette fois il s’agit d’un objet de type `tree`, grosse surprise, et dans son contenu encore des hash mais cette fois de type `blob`. On retrouve également les noms de nos fichiers `LICENSE.md` et `README.md`.
 
 Allez, on continue avec cat-file :
 
-![[content/Git/commit git de l'intérieur - files/first-blob-content.png]]
+![[first-blob-content.png]]
 
 Voilà, on a obtenu le contenu de nos fichiers et on a enfin fait le tour des 4 objets créés par notre premier commit.
 
 Si on résume ça donne ça :
 
-![[content/Git/commit git de l'intérieur - files/First-commit.excalidraw.png]]
+![[First-commit.excalidraw.png]]
 *Chaque flèche nous montre qui possède une référence vers qui.*
 # Une chaîne de commit
 
@@ -113,13 +113,13 @@ git commit -m "add a file and update README"
 
 Ok donc cette fois on modifie notre fichier README, on crée un nouveau fichier et on commit le tout.
 
-![[content/Git/commit git de l'intérieur - files/second-git-log.png]]
+![[second-git-log.png]]
 
 D’après vous, que va contenir ce second commit ? Un nouveau fichier et la nouvelle ligne de notre README ? 
 
 On vérifie dans le `.git` maintenant que l’on sait comment faire ?
 
-![[content/Git/commit git de l'intérieur - files/second-tree.png]]
+![[second-tree.png]]
 
 On remarque déjà que tous nos objets précédents sont toujours présents. Si on regarde leur contenu on constate qu’ils sont identiques à la première fois où on les a inspectés.
 
@@ -130,7 +130,7 @@ Maintenant, intéressons-nous aux nouveaux objets. On a 4 nouveaux fichiers dans
 
 Commençons par notre nouveau commit :
 
-![[content/Git/commit git de l'intérieur - files/second-commit-content.png]]
+![[second-commit-content.png]]
 
 Cette fois notre commit est un peu différent du premier. Il intègre une information supplémentaire, un **parent**, avec le hash de notre premier commit. 
 
@@ -138,17 +138,17 @@ C’est grâce à cette information que git connaît l’ordre de nos commits et
 
 Que contient notre tree ? 
 
-![[content/Git/commit git de l'intérieur - files/secont-tree-content.png]]
+![[secont-tree-content.png]]
 
 Le fichier `tree` contient une référence vers les deux fichiers de notre commit mais également la référence vers notre premier fichier non modifié (le fichier `LICENSE.md`).
 
-![[content/Git/commit git de l'intérieur - files/final-files-content.png]]
+![[final-files-content.png]]
 
 On remarque également que notre deuxième blob du fichier README.md contient nos deux lignes et pas seulement celle que l’on a rajoutée.
 
 Si on résume on se trouve dans la situation suivante :
 
-![[content/Git/commit git de l'intérieur - files/second-commit.excalidraw.png]]
+![[second-commit.excalidraw.png]]
 
 # En résumé 
 
