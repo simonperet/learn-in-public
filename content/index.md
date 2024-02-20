@@ -1,6 +1,6 @@
 ---
 title: Learn in public
-draft: true
+draft: false
 date: 2024-02-18
 created: 2024-02-18T22:44
 updated: 2024-02-20T06:03

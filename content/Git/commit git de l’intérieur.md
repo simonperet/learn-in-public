@@ -3,7 +3,7 @@ title: C’est quoi au final un commit dans git ?
 description: 
 tags:
   - git
-draft: true
+draft: false
 date: 2024-02-18
 created: 2024-02-18T18:31
 updated: 2024-02-19T22:29
@@ -34,7 +34,7 @@ On peut observer son contenu avec la commande :
 tree -a
 ```
 
-![[content/Git/commit git de l'intérieur - files/init-tree.png|400]]
+![[init-tree.png|400]]
 
 Pour le moment on ne va pas détailler tous les fichiers et dossiers créés, on va plutôt essayer de voir ce qu’il va se passer si on crée notre premier commit.
 
