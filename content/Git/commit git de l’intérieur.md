@@ -79,7 +79,7 @@ Il s’agit d’un fichier binaire que nous n’allons pas pouvoir lire simpleme
 
 `git cat-file` Permet de nous indiquer de quel type d’objet il s’agit pour git (avec le flag -t) et également de nous afficher son contenu de manière compréhensible(avec le flag -p).
 
-![[content/Git/commit git de l'intérieur - files/first-commit.png]]
+![[first-commit.png]]
 
 Il s’agit donc bien de notre commit. Contrairement à la sortie de `git log` on a une nouvelle information cette fois-ci : une ligne qui commence par `tree` et un nouveau hash.
 
